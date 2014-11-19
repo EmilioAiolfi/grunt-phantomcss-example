@@ -3,11 +3,7 @@ grunt-phantomcss-example
 
 Example project with yeoman - generator webapp and phantomCSS
 
-## Attention!
-
-If you have an issue or contribution for the Yeoman.io website, this is the place! If you want to submit an issue about Yeoman's source code or workflow please visit the [yeoman/yeoman repository](https://github.com/yeoman/yeoman).
-
-To get started:
+## To get started:
 
 **1\.** Clone the repository :
 
