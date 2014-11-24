@@ -1,9 +1,8 @@
-casper.start('http://localhost:9000/index.html')
-.then(function() {
-    phantomcss.screenshot('.header', 'Header Page');
 
-})
-.then(function() {
-    phantomcss.screenshot('.footer', 'Footer Page');
+casper.thenOpen(phantomcss.baseURL + 'index.html')
 
-})
+casper.then(function() {
+    phantomcss.screenshot('.header', 'Home - Header Page');
+    phantomcss.screenshot('.footer', 'Home - Footer Page');
+
+});

@@ -28,7 +28,7 @@
     "time-grunt": "~0.3.1",
     "jshint-stylish": "~0.1.5",
     "phantomjs": "~1.9.12",
-    "grunt-phantomcss": "~0.2.3"
+    "grunt-phantomcss": "git://github.com/EmilioAiolfi/grunt-phantomcss.git"
   },
   "engines": {
     "node": ">=0.10.0"

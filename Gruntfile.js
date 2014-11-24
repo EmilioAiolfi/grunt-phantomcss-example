@@ -143,20 +143,24 @@ module.exports = function (grunt) {
             all: {
                 options: {
                     run: true,
-                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/runner-test.html']
                 }
             }
         },
 
         phantomcss: {
+            options: {
+                baseURL: 'http://localhost:9001/',
+                logLevel: 'warning'
+            },
             desktop: {
                 options: {
                     screenshots: 'test/visual/screenshots/desktop/',
-                    results: 'test/visual/results/desktop',
+                    results: 'test/visual/results/desktop/',
                     viewportSize: [1024, 768]
                 },
                 src: [
-                'test/visual/files/desktop/**/*.js'
+                    'test/visual/files/desktop/*.js'
                 ]
             },
             mobile: {
@@ -166,7 +170,7 @@ module.exports = function (grunt) {
                     viewportSize: [320, 480]
                 },
                 src: [
-                'test/visual/files/mobile/**/*.js'
+                    'test/visual/files/mobile/**/*.js'
                 ]
             }
         },
@@ -421,7 +425,7 @@ module.exports = function (grunt) {
             'clean:server',
             'concurrent:server',
             'autoprefixer',
-            'connect:livereload',
+            'connect:test',
             'phantomcss:desktop'
         ]);
     });
