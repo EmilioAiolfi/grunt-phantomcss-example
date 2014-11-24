@@ -26,3 +26,8 @@ bower install
 ```
 
 Now you're ready!
+Test's NOW!
+
+```bash
+grunt test
+```
