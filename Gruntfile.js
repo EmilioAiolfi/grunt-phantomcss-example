@@ -150,8 +150,8 @@ module.exports = function (grunt) {
 
         phantomcss: {
             options: {
-                baseURL: 'http://localhost:9001/',
-                logLevel: 'warning'
+                baseURL: 'http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/',
+                logLevel: 'warning' // error, warning and debug
             },
             desktop: {
                 options: {
@@ -419,22 +419,12 @@ module.exports = function (grunt) {
         grunt.task.run([target ? ('serve:' + target) : 'serve']);
     });
 
-    grunt.registerTask('test:visual', function (target) {
-
-        grunt.task.run([
-            'clean:server',
-            'concurrent:server',
-            'autoprefixer',
-            'connect:test',
-            'phantomcss:desktop'
-        ]);
-    });
 
     grunt.registerTask('test', function (target) {
         if (target !== 'watch') {
             grunt.task.run([
                 'clean:server',
-                'concurrent:test',
+                'concurrent:server',
                 'autoprefixer'
             ]);
         }

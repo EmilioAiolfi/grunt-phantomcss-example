@@ -3,11 +3,8 @@ casper.thenOpen(phantomcss.baseURL + 'products.html')
 
     .wait(1000, function() {
 
-
         casper.then(function() {
-
             phantomcss.screenshot('.container', 'products - page');
-
         });
 
         casper.then(function() {
