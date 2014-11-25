@@ -1,6 +1,33 @@
 {
   "name": "grunt-phantomcss-example",
-  "version": "0.0.0",
+  "description": "Example project with yeoman - generator webapp and phantomCSS",
+  "version": "0.0.2",
+  "homepage": "https://github.com/EmilioAiolfi/grunt-phantomcss-example",
+  "author": {
+    "name": "Emilio Aiolfi",
+    "email": "emilio.aiolfi@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EmilioAiolfi/grunt-phantomcss-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EmilioAiolfi/grunt-phantomcss-example/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/EmilioAiolfi/grunt-phantomcss-example/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+      "node": ">= 0.10.0"
+  },
+  "scripts": {
+      "test": "grunt test",
+      "postinstall": "bower install"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -28,9 +55,20 @@
     "time-grunt": "~0.3.1",
     "jshint-stylish": "~0.1.5",
     "phantomjs": "~1.9.12",
-    "grunt-phantomcss": "git://github.com/EmilioAiolfi/grunt-phantomcss.git"
+    "grunt-phantomcss": "git://github.com/EmilioAiolfi/grunt-phantomcss#0.2.7"
   },
-  "engines": {
-    "node": ">=0.10.0"
-  }
+  "keywords": [
+      "yeoman",
+      "gruntplugin",
+      "phantomcss",
+      "css",
+      "regression",
+      "test",
+      "phantomjs",
+      "grunt",
+      "visual",
+      "generator",
+      "webapp",
+      "casperjs"
+  ]
 }
